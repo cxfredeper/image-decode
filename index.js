@@ -9,6 +9,7 @@ async function generateFile() {
 	let payload = buffer.slice(4, 4+length);
 
 	let blob = new Blob([payload], {type: "application/octet-stream"});
+	out.download = "thing";
 	out.href = URL.createObjectURL(blob);
 	out.style.display = "inherit";
 }
