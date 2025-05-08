@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Image to File</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: sans-serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+  </style>
+  <script type="module">
+    import UPNG from "https://cdn.skypack.dev/upng-js@2.1.0"; window.UPNG = UPNG;
+  </script>
+  <script src="index.js"></script>
+</head>
+<body>
+<h1>Image to file decode thingy</h1>
+<p>
+	The inverse of the <a href="https://cxfredeper.github.io/image-encode/">encode thingy</a>.
+	This only works with images encoded with that thing.
+	There's also zero error correction
+	so it will break on decode if the image was recompressed.
+	(shrug)
+
+<h2>Choose the image</h2>
+<input type="file" id="in" accept="image/*"></input>
+
+<h2>Decode</h2>
+<input type="button" value="decode" onclick="generateFile();" />
+
+<a id="out" style="display: none;"><h2>Here's your file</h2></a>
+</body>
+</html>
